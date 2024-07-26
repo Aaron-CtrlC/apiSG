@@ -1,0 +1,27 @@
+<h3 mat-dialog-title>
+  {{film.title}}
+</h3>
+<mat-dialog-content style="display: flex; gap: 20px;">
+  <img src="{{film.image}}" alt="{{film.title}}" style="width: 250px; height: 300px; border-radius: 20px;">
+  <div class="cont-inf">
+    <p>
+      {{film.description}}
+    </p>
+    <mat-divider></mat-divider>
+    <p>
+      <strong>Release date</strong> {{film.release_date}} <br>
+      <strong>Running time </strong> {{film.running_time}} <br>
+      <strong>Direct </strong>{{film.director}} <br>
+      <strong>Producer </strong> {{film.producer}} <br>
+    </p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>
+    Close
+  </button>
+
+  <button mat-flat-button mat-dialog-close [routerLink]="['/films',film.id]">
+    More
+  </button>
+</mat-dialog-actions>

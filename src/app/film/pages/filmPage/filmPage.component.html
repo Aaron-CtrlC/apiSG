@@ -1,0 +1,25 @@
+<section class="flex flex-column justify-content-center align-items-center w-screen		" *ngIf="film">
+    <div class="cont-inf-film w-8 m-5 ">
+        <div class="cont-title-group flex align-items-center ">
+            <h2>{{film.title}} </h2> 
+            <h6>| {{film.original_title}}</h6>
+            <p>{{film.release_date}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="cont-inf flex m-2 gap-2">
+            <img src="{{film.image}}" alt="{{film.title}}" style="width: 350px; height: 500px; border-radius: 5px; " >
+            <div class="inf">
+                <h5>Description</h5>
+                <p>{{film.description}}</p>
+                <mat-chip-set>
+                    <mat-chip> <strong>Duration:</strong>{{film.running_time}} mins </mat-chip>
+                    <mat-chip> <strong>Director:</strong>{{film.director}} </mat-chip>
+                    <mat-chip> <strong>Producer:</strong>{{film.producer}}</mat-chip>
+                </mat-chip-set>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
